@@ -572,7 +572,7 @@ jobs:
         ${CT_NG} version
 
     - name: Download version information
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4.1.7
       with:
         name: version
         path: ${{ runner.temp }}
@@ -1092,7 +1092,7 @@ jobs:
         persist-credentials: false
 
     - name: Download artifacts
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4.1.7
       with:
         # NOTE: This downloads all build artifacts, including the toolchains and host tools for
         #       the irrelevant hosts, because the download-artifact action does not support
@@ -1324,7 +1324,7 @@ jobs:
         echo "VENV_ACTIVATE=${VENV_ACTIVATE}" >> $GITHUB_ENV
 
     - name: Download version information
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4.1.7
       with:
         name: version
         path: artifacts
@@ -1343,7 +1343,7 @@ jobs:
         echo "BUNDLE_DIR=${BUNDLE_DIR}" >> $GITHUB_ENV
 
     - name: Download distribution bundle
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4.1.7
       with:
         name: ${{ env.BUNDLE_NAME }}
         path: artifacts
